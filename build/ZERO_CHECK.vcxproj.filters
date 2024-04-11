@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Gitty_learning\PRACTICOM\managerUI\build\CMakeFiles\f8b4578d05d7af586fd90aa49dc3e1a5\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{83006473-2F9F-304D-9B47-2F3C8912ABF1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

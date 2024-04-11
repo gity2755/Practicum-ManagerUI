@@ -1,0 +1,4 @@
+D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI.dir
+D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/INSTALL.dir
+D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/ALL_BUILD.dir
+D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/ZERO_CHECK.dir
