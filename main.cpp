@@ -10,11 +10,6 @@ int main(int argc, char *argv[])
     MainWindow mainWindow;
     mainWindow.show();
 
-    // Create an instance of CameraSettingsDialog
-    // CameraSettingsDialog cameraSettingsDialog;
-    // cameraSettingsDialog.exec(); // תציג את חלון ההגדרות של המצלמה
 
-    AllCamerasPage allcameraspage(3);
-    allcameraspage.show();
     return a.exec();
 }

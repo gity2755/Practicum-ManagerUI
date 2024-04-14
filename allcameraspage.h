@@ -2,8 +2,7 @@
 #define ALLCAMERASPAGE_H
 
 #include <QWidget>
-#include <QVBoxLayout>
-#include <QLabel>
+#include <QGridLayout>
 
 class AllCamerasPage : public QWidget
 {
@@ -11,9 +10,13 @@ class AllCamerasPage : public QWidget
 
 public:
     explicit AllCamerasPage(int numCameras, QWidget *parent = nullptr);
+    void toggleCamera();
+    void showCameraSettings();
+    void showAlerts();
 
 private:
-    QVBoxLayout *layout;
+    QGridLayout *layout;
+    int numCameras; // משתנה חדש
 };
 
 #endif // ALLCAMERASPAGE_H

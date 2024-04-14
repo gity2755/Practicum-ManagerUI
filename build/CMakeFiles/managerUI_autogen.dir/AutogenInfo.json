@@ -268,7 +268,33 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"D:/Gitty_learning/PRACTICOM/managerUI/allcameraspage.h",
+			"MU",
+			"EWIEGA46WW/moc_allcameraspage.cpp",
+			null
+		],
+		[
+			"D:/Gitty_learning/PRACTICOM/managerUI/camerasettingsdialog.h",
+			"MU",
+			"EWIEGA46WW/moc_camerasettingsdialog.cpp",
+			null
+		],
+		[
+			"D:/Gitty_learning/PRACTICOM/managerUI/login.h",
+			"MU",
+			"EWIEGA46WW/moc_login.cpp",
+			null
+		],
+		[
+			"D:/Gitty_learning/PRACTICOM/managerUI/mainwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "D:/Gitty_learning/PRACTICOM/managerUI/build/managerUI_autogen/include",
 	"INCLUDE_DIR_Debug" : "D:/Gitty_learning/PRACTICOM/managerUI/build/managerUI_autogen/include_Debug",
@@ -403,7 +429,22 @@
 	"SETTINGS_FILE_MinSizeRel" : "D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI_autogen.dir/AutogenUsed_MinSizeRel.txt",
 	"SETTINGS_FILE_RelWithDebInfo" : "D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
 	"SETTINGS_FILE_Release" : "D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI_autogen.dir/AutogenUsed_Release.txt",
-	"SOURCES" : [],
+	"SOURCES" : 
+	[
+		[
+			"D:/Gitty_learning/PRACTICOM/managerUI/allcameraspage.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Gitty_learning/PRACTICOM/managerUI/camerasettingsdialog.cpp",
+			"MU",
+			null
+		],
+		[ "D:/Gitty_learning/PRACTICOM/managerUI/login.cpp", "MU", null ],
+		[ "D:/Gitty_learning/PRACTICOM/managerUI/main.cpp", "MU", null ],
+		[ "D:/Gitty_learning/PRACTICOM/managerUI/mainwindow.cpp", "MU", null ]
+	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : [],

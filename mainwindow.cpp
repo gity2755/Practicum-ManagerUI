@@ -12,17 +12,22 @@ MainWindow::MainWindow(QWidget *parent)
 
     Login *loginPage = new Login(this);
     ListToDo *listToDoPage = new ListToDo(this);
-
+    AllCamerasPage *allCamerasPage=new AllCamerasPage(3);
     stackedWidget->addWidget(loginPage);
     stackedWidget->addWidget(listToDoPage);
+    stackedWidget->addWidget(allCamerasPage);
 
     connect(loginButton, &QPushButton::clicked, this, &MainWindow::showLoginPage);
     connect(listToDoButton, &QPushButton::clicked, this, &MainWindow::showListToDoPage);
+    connect(allCamerasButton, &QPushButton::clicked, this, &MainWindow::showAllCamerasPage);
+
 }
 
 MainWindow::~MainWindow()
 {
 }
+
+// בקובץ הכותרת MainWindow.cpp
 
 void MainWindow::createNavbar()
 {
@@ -31,7 +36,7 @@ void MainWindow::createNavbar()
 
     loginButton = new QPushButton("Login");
     listToDoButton = new QPushButton("List To Do");
-    QPushButton *allCamerasButton = new QPushButton("All Cameras"); // יצירת הכפתור החדש
+    allCamerasButton = new QPushButton("All Cameras"); // יצירת הכפתור החדש
 
     layout->addWidget(loginButton);
     layout->addWidget(listToDoButton);
@@ -55,15 +60,8 @@ void MainWindow::showListToDoPage()
 }
 void MainWindow::showAllCamerasPage()
 {
-    // Create an instance of AllCamerasPage with a specific number of cameras
-    int numCameras = 3; // Change this to the desired number of cameras
-    AllCamerasPage *allCamerasPage = new AllCamerasPage(numCameras);
+    stackedWidget->setCurrentIndex(2); // Index of the login page in the stacked widget
 
-    // Add the AllCamerasPage to the stacked widget
-    stackedWidget->addWidget(allCamerasPage);
-
-    // Set the current page to the AllCamerasPage
-    stackedWidget->setCurrentWidget(allCamerasPage);
 }
 
 

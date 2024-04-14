@@ -128,8 +128,6 @@ D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI_autogen.dir/AutogenInfo.json Debug
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Gitty_learning/PRACTICOM/managerUI/build/managerUI_autogen/autouic_Debug.stamp
-if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -194,8 +192,6 @@ if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI_autogen.dir/AutogenInfo.json Release
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Gitty_learning/PRACTICOM/managerUI/build/managerUI_autogen/autouic_Release.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -262,8 +258,6 @@ D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI_autogen.dir/AutogenInfo.json MinSizeRel
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Gitty_learning/PRACTICOM/managerUI/build/managerUI_autogen/autouic_MinSizeRel.stamp
-if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 :cmErrorLevel
@@ -327,8 +321,6 @@ if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/Gitty_learning/PRACTICOM/managerUI/build/CMakeFiles/managerUI_autogen.dir/AutogenInfo.json RelWithDebInfo
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Gitty_learning/PRACTICOM/managerUI/build/managerUI_autogen/autouic_RelWithDebInfo.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -410,25 +402,32 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_Debug.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\main.cpp" />
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\login.h" />
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\login.cpp" />
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\mainwindow.h" />
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\mainwindow.cpp" />
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\camerasettingsdialog.h" />
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\camerasettingsdialog.cpp" />
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\allcameraspage.h" />
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\allcameraspage.cpp" />
+    <None Include="D:\Gitty_learning\PRACTICOM\managerUI\camgif.gif">
+    </None>
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_Release.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_MinSizeRel.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_RelWithDebInfo.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>

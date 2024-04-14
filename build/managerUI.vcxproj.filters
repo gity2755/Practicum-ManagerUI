@@ -4,6 +4,21 @@
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\camerasettingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\allcameraspage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -15,9 +30,29 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\login.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\camerasettingsdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\allcameraspage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="D:\Gitty_learning\PRACTICOM\managerUI\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="D:\Gitty_learning\PRACTICOM\managerUI\camgif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B883D6E3-4F6C-3BDB-8F7C-A8F1CAB07E5E}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{B418935E-7DC5-3DE9-BB9A-5D8F218C3610}</UniqueIdentifier>
     </Filter>
