@@ -1,23 +1,23 @@
 #include "camerasettingsdialog.h"
-
-CameraSettingsDialog::CameraSettingsDialog(QWidget *parent)
+#include "camera.h"
+CameraSettingsDialog::CameraSettingsDialog(Camera *camera,QWidget *parent)
     : QDialog(parent)
 {
     // הגדרת האלמנטים בפורמט שורה-ערך
-    ipLineEdit = new QLineEdit(this);
-    qualityComboBox = new QComboBox(this);
+    name = new QLineEdit(this);
+    resolution = new QComboBox(this);
     saveButton = new QPushButton("Save", this);
     cancelButton = new QPushButton("Cancel", this);
 
     // הגדרת אופציות האיכות ב- ComboBox
-    qualityComboBox->addItem("Low");
-    qualityComboBox->addItem("Medium");
-    qualityComboBox->addItem("High");
+    resolution->addItem("Low");
+    resolution->addItem("Medium");
+    resolution->addItem("High");
 
     // הגדרת פורמט המידע
     QFormLayout *formLayout = new QFormLayout();
-    formLayout->addRow("IP:", ipLineEdit);
-    formLayout->addRow("Quality:", qualityComboBox);
+    formLayout->addRow("name:", name);
+    formLayout->addRow("resolution:", resolution);
 
     // הגדרת כפתורים
     QHBoxLayout *buttonLayout = new QHBoxLayout();
@@ -30,22 +30,27 @@ CameraSettingsDialog::CameraSettingsDialog(QWidget *parent)
     mainLayout->addLayout(buttonLayout);
 
     // קשר בין הכפתור לפונקציה המתאימה
-    connect(saveButton, &QPushButton::clicked, this, &CameraSettingsDialog::onSaveButtonClicked);
+    connect(saveButton, &QPushButton::clicked, this,[=]() { onSaveButtonClicked(camera); });
     connect(cancelButton, &QPushButton::clicked, this, &CameraSettingsDialog::reject);
 }
 
-CameraSettingsDialog::~CameraSettingsDialog()
-{
-}
+// CameraSettingsDialog::~CameraSettingsDialog()
+// {
+
+// }
 
 QStringList CameraSettingsDialog::getCameraSettings() const
 {
     QStringList settings;
-    settings << ipLineEdit->text() << qualityComboBox->currentText();
+    settings << name->text() << resolution->currentText();
     return settings;
 }
 
-void CameraSettingsDialog::onSaveButtonClicked()
+void CameraSettingsDialog::onSaveButtonClicked(Camera* camera)
 {
+    camera->setName(name->text());
+    camera->setResolution(3);
+    QString s=camera->getName();
+    qDebug() << "Camera Name: " << s;
     accept(); // קריאה לפונקציה accept כדי לסגור את הדיאלוג ולהחזיר את הערכים
 }

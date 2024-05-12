@@ -28,6 +28,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         camerasettingsdialog.h camerasettingsdialog.cpp
         allcameraspage.h allcameraspage.cpp
         camgif.gif
+        camera.h camera.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

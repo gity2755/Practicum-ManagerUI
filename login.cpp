@@ -38,9 +38,6 @@ void Login::attemptLogin()
     QString username = usernameLineEdit->text();
     QString password = passwordLineEdit->text();
 
-    // כאן יש להוסיף לוגיקה לבדיקת ההתחברות
-    // כרגע אני מקבל יוזר וסיסמה ומדפיס כי התחברתי
-    // זה צריך להישנות להתאמה לדרישות הספציפיות של האפליקציה שלך
     if (username == "admin" && password == "password")
     {
         statusLabel->setText("Login successful!");

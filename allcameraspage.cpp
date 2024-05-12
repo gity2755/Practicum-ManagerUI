@@ -4,60 +4,37 @@
 #include <QGridLayout>
 #include <QPushButton>
 #include "camerasettingsdialog.h"
+#include "camera.h"
 
 AllCamerasPage::AllCamerasPage(int numCameras, QWidget *parent)
     : QWidget(parent)
 {
-    QGridLayout* gridLayout = new QGridLayout(this);
+    layout = new QGridLayout(this);
+
+    // Create an array to hold the cameras
+    Camera **cameras = new Camera*[numCameras];
 
     int numRows = (numCameras + 2) / 3; // חישוב מספר השורות הדרושות
 
     // Loop to create camera widgets
-    for (int i = 0; i < numCameras; i++)
-    {
-        // Create camera widget
-        QWidget *cameraWidget = new QWidget(this);
-        QVBoxLayout *cameraLayout = new QVBoxLayout(cameraWidget);
-        QString url = R"(D:\Gitty_learning\PRACTICOM\managerUI\img.png)";
-        QPixmap img(url);
-        QLabel *label = new QLabel(this);
-        label->setPixmap(img);
-        cameraLayout->addWidget(label);
+    for (int i = 0; i < numCameras; ++i) {
+        // Create a new Camera instance
+        Camera *camera = new Camera(this);
+        cameras[i] = camera;
+        // Set up the camera's properties (e.g., resolution, name, etc.)
+        camera->setResolution(1);
+        camera->setIsCameraOn(false);
+        camera->setName("Camera " + QString::number(i + 1));
+        camera->setCpuUsage(0);
+        camera->setMemoryUsage(0);
+        camera->setMemory(0);
 
-        // Create buttons
-        QPushButton *toggleButton = new QPushButton("Toggle Camera", this);
-        QPushButton *settingsButton = new QPushButton("Camera Settings", this);
-        QPushButton *alertButton = new QPushButton("Show Alerts", this);
-
-        // Connect buttons to slots
-        connect(toggleButton, &QPushButton::clicked, this, &AllCamerasPage::toggleCamera);
-        connect(settingsButton, &QPushButton::clicked, this, &AllCamerasPage::showCameraSettings);
-        connect(alertButton, &QPushButton::clicked, this, &AllCamerasPage::showAlerts);
-
-        // Add buttons to camera layout
-        cameraLayout->addWidget(toggleButton);
-        cameraLayout->addWidget(settingsButton);
-        cameraLayout->addWidget(alertButton);
-
-        gridLayout->addWidget(cameraWidget, i / 3, i % 3); // הוספת הווידג'ט לגריד
+        // Add the camera widget to the layout
+        layout->addWidget(camera, i / 3, i % 3);
     }
 
-    // כלום לא צריך לשנות פה
-    qDebug() << "after" << gridLayout;
-}
+    qDebug() << "after loop" << layout;
 
-void AllCamerasPage::toggleCamera()
-{
-    // קוד להדלקה/כיבוי מצלמה
-}
-
-void AllCamerasPage::showCameraSettings()
-{
-    CameraSettingsDialog dialog;
-    dialog.exec();
-}
-
-void AllCamerasPage::showAlerts()
-{
-    // קוד להצגת אזהרות
+    // Don't forget to delete the array of cameras when you're done with it
+    delete[] cameras;
 }

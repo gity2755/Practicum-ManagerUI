@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QGridLayout>
+#include <QPushButton>
+#include "camera.h"
 
 class AllCamerasPage : public QWidget
 {
@@ -10,13 +12,9 @@ class AllCamerasPage : public QWidget
 
 public:
     explicit AllCamerasPage(int numCameras, QWidget *parent = nullptr);
-    void toggleCamera();
-    void showCameraSettings();
-    void showAlerts();
-
 private:
     QGridLayout *layout;
-    int numCameras; // משתנה חדש
+
 };
 
 #endif // ALLCAMERASPAGE_H

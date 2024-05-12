@@ -16,7 +16,6 @@ public:
 
 private slots:
     void showLoginPage();
-    void showListToDoPage();
     void showAllCamerasPage();
 
 private:
@@ -24,7 +23,6 @@ private:
 
     QStackedWidget *stackedWidget;
     QPushButton *loginButton;
-    QPushButton *listToDoButton;
     QPushButton *allCamerasButton;
 
 };

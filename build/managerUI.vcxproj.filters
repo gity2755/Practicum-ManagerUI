@@ -19,6 +19,9 @@
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\allcameraspage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,6 +43,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\allcameraspage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
