@@ -1,5 +1,3 @@
-// camera.h
-
 #ifndef CAMERA_H
 #define CAMERA_H
 
@@ -8,6 +6,8 @@
 #include <QDebug>
 #include <QLabel>
 #include <QString>
+#include <QTimer>
+#include "cameraalerts.h"
 
 class Camera : public QWidget
 {
@@ -16,7 +16,7 @@ class Camera : public QWidget
 public:
     enum Resolution { LOW, MEDIUM, HIGH };
 
-    explicit Camera( QWidget *parent = nullptr);
+    explicit Camera(QWidget *parent = nullptr);
     void setToggleOnButton(QPushButton *button);
     void setIsCameraOn(bool isCameraOn);
     void setName(QString name);
@@ -29,7 +29,8 @@ public:
     int getCpuUsage();
     int getMemoryUsage();
     int getMemory();
-
+    void addError(const QString &text, const QDateTime &dateTime);
+    void scheduleError(const QString &text, int seconds);
 
 private:
     bool m_isCameraOn;
@@ -41,10 +42,15 @@ private:
     QPushButton *m_toggleOnButton;
     QLabel *m_label;
     QLabel *m_detailsLabel;
+    CameraAlerts *m_cameraAlerts;
+    QTimer *m_errorTimer;
 
 private slots:
     void handleToggleOnButtonClicked();
     void showCameraSettings();
+    void showAlerts();
+    void backToCameraView();
+    //void handleScheduledError();
 };
 
 #endif // CAMERA_H

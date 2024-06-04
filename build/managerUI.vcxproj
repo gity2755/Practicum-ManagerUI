@@ -419,6 +419,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </None>
     <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\camera.h" />
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\camera.cpp" />
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\cameraalerts.h" />
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\cameraalerts.cpp" />
+    <ClInclude Include="D:\Gitty_learning\PRACTICOM\managerUI\errorlog.h" />
+    <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\errorlog.cpp" />
     <ClCompile Include="D:\Gitty_learning\PRACTICOM\managerUI\build\managerUI_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>

@@ -28,7 +28,7 @@ AllCamerasPage::AllCamerasPage(int numCameras, QWidget *parent)
         camera->setCpuUsage(0);
         camera->setMemoryUsage(0);
         camera->setMemory(0);
-
+        camera->scheduleError("hi",5);
         // Add the camera widget to the layout
         layout->addWidget(camera, i / 3, i % 3);
     }
@@ -37,4 +37,5 @@ AllCamerasPage::AllCamerasPage(int numCameras, QWidget *parent)
 
     // Don't forget to delete the array of cameras when you're done with it
     delete[] cameras;
+
 }
